@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Unfolding of Fridays for Future</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="static/fff_design.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <style>
+  body,h1 {font-family: "Raleway", sans-serif}
+  body, html {height: 100%}
+  .bgimg {
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+  }
+  .dot_sel {
+    height: 15px;
+    width: 15px;
+    background-color: #686868;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .dot {
+    height: 15px;
+    width: 15px;
+    background-color: #000000;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  </style>
+
+
+  <link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-1.2.0.min.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-widgets-1.2.0.min.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-tables-1.2.0.min.css" type="text/css" />
+
+  <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-1.2.0.min.js"></script>
+  <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-widgets-1.2.0.min.js"></script>
+  <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-tables-1.2.0.min.js"></script>
+  <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-gl-1.2.0.min.js"></script>
+  <script type="text/javascript">
+      Bokeh.set_log_level("info");
+  </script>
+
+</head>
+
+
+<body>
+
+<div class="bgimg w3-display-container w3-text-black">
+
+  <div class="w3-display-topmiddle w3-padding-large">
+    <h1 class="w3-xxlarge w3-center"> Synchronization and periodicity </h1>
+  </div> 
+
+  <div class="w3-display-middle"> 
+    <div id="tw_daily"></div>
+      <script>
+      fetch('/plot_tw_daily')
+        .then(function(response) { return response.json(); })
+        .then(function(item) { Bokeh.embed.embed_item(item); })
+      </script>
+  </div>
+
+  <div class="w3-display-topright w3-padding-large">
+    <p>
+      <a href="{{ url_for('page1') }}"><span class="dot"></span></a><br>
+      <a href="{{ url_for('page2') }}"><span class="dot"></span></a><br>
+      <a href="{{ url_for('page3') }}"><span class="dot"></span></a><br>
+      <a href="{{ url_for('page4') }}"><span class="dot"></span></a><br>
+      <a href="{{ url_for('page5') }}"><span class="dot_sel"></span></a><br>
+      <a href="{{ url_for('page6') }}"><span class="dot"></span></a><br>
+      <a href="{{ url_for('page7') }}"><span class="dot"></span></a><br>
+      <a href="{{ url_for('page8') }}"><span class="dot"></span></a><br>
+      <a href="{{ url_for('page9') }}"><span class="dot"></span></a>
+    </p>
+  </div>
+
+</div>
+
+</body>
+</html>

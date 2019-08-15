@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<title>Unfolding of Fridays for Future</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="static/fff_design.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  background-image: url('static/globalcore_op.pdf');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+.dot_sel {
+  height: 15px;
+  width: 15px;
+  background-color: #686868;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color: #000000;
+  border-radius: 50%;
+  display: inline-block;
+}
+</style>
+<body>
+
+<div class="bgimg w3-display-container w3-text-black">
+
+  <div class="w3-display-middle">
+    <h1 class="w3-xxlarge w3-center">Public support for progressive climate policies is at the heart of the fight against global warming.</h1>
+  </div>
+
+  <div class="w3-display-topright w3-padding-large">
+    <p>
+      <a href="{{ url_for('page1') }}"><span class="dot"></span></a><br>
+      <a href="{{ url_for('page2') }}"><span class="dot_sel"></span></a><br>
+      <a href="{{ url_for('page3') }}"><span class="dot"></span></a><br>
+      <a href="{{ url_for('page4') }}"><span class="dot"></span></a><br>
+      <a href="{{ url_for('page5') }}"><span class="dot"></span></a><br>
+      <a href="{{ url_for('page6') }}"><span class="dot"></span></a><br>
+      <a href="{{ url_for('page7') }}"><span class="dot"></span></a><br>
+      <a href="{{ url_for('page8') }}"><span class="dot"></span></a><br>
+      <a href="{{ url_for('page9') }}"><span class="dot"></span></a>
+    </p>
+  </div>
+
+  <div class="w3-display-bottomleft w3-padding-large">
+    <h1 class="w3-large"> Background image: <a href="http://www.climate-lab-book.ac.uk/2018/warming-stripes/" target="_blank">Warming stripes</a> from Ed Hawkins showing the yearly global temperatures from 1850-2017 </h1>
+  </div>
+
+</div>
+
+</body>
+</html>
+
+
+
+

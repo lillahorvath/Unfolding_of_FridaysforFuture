@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<title>Unfolding of Fridays for Future</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="static/fff_design.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+.dot_sel {
+  height: 15px;
+  width: 15px;
+  background-color: #686868;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color: #000000;
+  border-radius: 50%;
+  display: inline-block;
+}
+</style>
+<body>
+
+<div class="bgimg w3-display-container w3-text-black">
+  <div class="w3-display-middle">
+    <h1 class="w3-xxlarge w3-center">ABOUT THIS PROJECT</h1>
+    <hr class="w3-border-black" style="margin:auto;width:40%">
+    <p class="w3-large w3-center">The Fridays for Future youth environmental movement has achieved unparalleled success in channeling public support against climate change. In this project, I analyzed the representation of the movement on Twitter to gain actionable insights into how to navigate an impactful environmental campaign. For more information about the movement visit the official <a href="https://www.fridaysforfuture.org" target="_blank">homepage</a> and follow <a href="https://twitter.com/GretaThunberg" target="_blank">Greta Thunberg</a> on Twitter.</p>
+    <p class="w3-medium w3-center">About the data and code: The data presented in this project reflect the state of the movement up to July 2019. I generated the map based on the number of registered protests available from the Fridays for Future <a href="https://www.fridaysforfuture.org" target="_blank">homepage</a>. To acquire the tweets with the hashtag #FridaysForFuture I used Twitter's API. Note that for the language analysis I collected the 5K most and least popular tweets each, published between Spring-Summer 2019. Popularity was defined based on the number of retweets and likes. For data and code please visit the project's <a href="https://github.com/lillahorvath" target="_blank">github repository</a>. </p>
+  </div>
+
+  <div class="w3-display-topright w3-padding-large">
+    <p>
+      <a href="{{ url_for('page1') }}"><span class="dot"></span></a><br>
+      <a href="{{ url_for('page2') }}"><span class="dot"></span></a><br>
+      <a href="{{ url_for('page3') }}"><span class="dot"></span></a><br>
+      <a href="{{ url_for('page4') }}"><span class="dot"></span></a><br>
+      <a href="{{ url_for('page5') }}"><span class="dot"></span></a><br>
+      <a href="{{ url_for('page6') }}"><span class="dot"></span></a><br>
+      <a href="{{ url_for('page7') }}"><span class="dot"></span></a><br>
+      <a href="{{ url_for('page8') }}"><span class="dot"></span></a><br>
+      <a href="{{ url_for('page9') }}"><span class="dot_sel"></span></a>
+    </p>
+  </div>
+
+  <div class="w3-display-bottomleft w3-padding-large">
+    <h1 class="w3-large w3-text-grey"> By Lilla Horvath | <a href="mailto:lll.hrvth@gmail.com">Email</a> | <a href="https://twitter.com/lll_hrvth" target="_blank">Twitter</a> | <a href="https://github.com/lillahorvath" target="_blank">Github</a></h1>
+  </div>
+
+</div>
+
+</body> 
+</html>
