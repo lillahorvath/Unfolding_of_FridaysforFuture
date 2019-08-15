@@ -43,17 +43,8 @@ def tw_hourly_data():
 # ----------
 def tw_nlp_data():
 
-	# get NLP data
-	#all_bwv_p, all_counts_p = dill.load(open('data/twitter/nlp_tweets_p.pkd', 'rb'))
-	#all_bwv_np, all_counts_np = dill.load(open('data/twitter/nlp_tweets_np.pkd', 'rb'))
+	# get NLP results data
 	list_words_p,popscore_p,list_words_np,popscore_np = dill.load(open('data/twitter/words_pop.pkd', 'rb'))
-
-	# create lists of words and word counts: p - popular, np - not popular
-	#list_words_p = sorted(all_bwv_p.vocabulary_.items(), key=lambda x: (x[1], x[0]))
-	#popscore_p = list(np.sum(all_counts_p.toarray(), axis = 0))
-
-	#list_words_np = sorted(all_bwv_np.vocabulary_.items(), key=lambda x: (x[1], x[0]))
-	#popscore_np = list(np.sum(all_counts_np.toarray(), axis = 0))
 
 	words_pop_p = [[list_words_p[i][0], popscore_p[i]] for i in range(len(list_words_p))]
 	words_pop_np = [[list_words_np[i][0], popscore_np[i]] for i in range(len(list_words_np))]
